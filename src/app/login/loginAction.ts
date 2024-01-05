@@ -17,6 +17,7 @@ export const loginAction = async (
       httpOnly: true,
       secure: true,
       path: "/",
+      maxAge: 14 * 24 * 60 * 60,
     });
 
     redirect("/");
