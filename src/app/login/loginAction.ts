@@ -10,7 +10,7 @@ export const loginAction = async (
   const username = formData.get("username");
   const password = formData.get("password");
 
-  if (username === "user" && password === "pass") {
+  if (username === process.env.USERNAME && password === process.env.PASSWORD) {
     cookies().set({
       name: "session",
       value: process.env.SESSION_KEY,

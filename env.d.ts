@@ -4,5 +4,7 @@ declare namespace NodeJS {
     SESSION_KEY: string;
     UPSTASH_REDIS_REST_URL: string;
     UPSTASH_REDIS_REST_TOKEN: string;
+    USERNAME: string;
+    PASSWORD: string;
   }
 }
