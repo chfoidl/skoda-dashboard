@@ -19,7 +19,11 @@ export default async function Home() {
       <div className="max-w-[375px] w-full mx-auto mt-12 grid grid-cols-1 gap-4">
         <DataBox label="Batterieladung" value={`${data.charge}%`} />
         <DataBox label="Ladeleistung" value={`${data.power} W`} />
-        <DataBox label="Zeit" value={data.time} />
+        <DataBox label="Zeit bis voll" value={data.time} />
+        <DataBox
+          label="Ladekabel angesteckt"
+          value={data.cableConnected ? "Ja" : "Nein"}
+        />
       </div>
     </>
   );

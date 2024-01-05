@@ -5,6 +5,7 @@ export type SensorData = {
   charge: number;
   power: number;
   time: string;
+  cableConnected: boolean;
 };
 
 export const getData = unstable_cache(
