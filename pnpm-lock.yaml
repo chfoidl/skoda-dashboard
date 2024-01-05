@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@upstash/redis':
+    specifier: ^1.28.0
+    version: 1.28.0
+  '@vercel/kv':
+    specifier: ^1.0.1
+    version: 1.0.1
   classnames:
     specifier: ^2.5.1
     version: 2.5.1
@@ -237,6 +243,25 @@ packages:
     resolution: {integrity: sha512-WZLiwShhwLRmeV6zH+GkbOFT6Z6VklCItrDioxUnv+u4Ll+8vKeFySoFyK/0ctcRpOmwAicELfmys1sDc/Rw+A==}
     dev: true
 
+  /@upstash/redis@1.25.1:
+    resolution: {integrity: sha512-ACj0GhJ4qrQyBshwFgPod6XufVEfKX2wcaihsEvSdLYnY+m+pa13kGt1RXm/yTHKf4TQi/Dy2A8z/y6WUEOmlg==}
+    dependencies:
+      crypto-js: 4.2.0
+    dev: false
+
+  /@upstash/redis@1.28.0:
+    resolution: {integrity: sha512-vvFMUHGA5jUAXQHuAzFHNLD2TND/2aaf1BUPYBeg73CkQ9X+jorWVi7VGxZtRXPDEFJR9KvzuwCacbSproOKcw==}
+    dependencies:
+      crypto-js: 4.2.0
+    dev: false
+
+  /@vercel/kv@1.0.1:
+    resolution: {integrity: sha512-uTKddsqVYS2GRAM/QMNNXCTuw9N742mLoGRXoNDcyECaxEXvIHG0dEY+ZnYISV4Vz534VwJO+64fd9XeSggSKw==}
+    engines: {node: '>=14.6'}
+    dependencies:
+      '@upstash/redis': 1.25.1
+    dev: false
+
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -391,6 +416,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js@4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
+    dev: false
 
   /cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}

@@ -1,8 +1,11 @@
 import { DataBox } from "@/components/DataBox";
+import { getData } from "@/lib/data";
 import { quicksand } from "@/styles/fonts";
 import classNames from "classnames";
 
 export default async function Home() {
+  const data = await getData();
+
   return (
     <>
       <h1
@@ -14,9 +17,9 @@ export default async function Home() {
         Skoda Status
       </h1>
       <div className="max-w-[375px] w-full mx-auto mt-12 grid grid-cols-1 gap-4">
-        <DataBox label="Batterieladung" value="10%" />
-        <DataBox label="Ladeleistung" value="11000 W" />
-        <DataBox label="Zeit" value="05:15" />
+        <DataBox label="Batterieladung" value={`${data.charge}%`} />
+        <DataBox label="Ladeleistung" value={`${data.power} W`} />
+        <DataBox label="Zeit" value={data.time} />
       </div>
     </>
   );
@@ -28,4 +31,3 @@ export const metadata = {
   title: "Skoda Dashboard",
   robots: "noindex, nofollow",
 };
-
